@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import ListOfGifs from './componentes/ListSearh';
+import { Route } from 'wouter';
+import Search from './componentes/search';
+import Inicio from './componentes/inicio';
+import useGifs from './hooks/useGifs';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <main >
+    <div className='App-header'>
+      <header>
+        <Search></Search>
       </header>
+      <section>
+        <h1>Trending</h1>
+          <div id='container'> 
+            <Route component={Inicio} path="/"></Route>
+            <Route component={ListOfGifs} path="/gif/:keyword"></Route>
+          </div>
+      </section>  
     </div>
-  );
-}
-
-export default App;
+    
+    <footer>
+      <p>Powered by: <a id='aFooter' href='https://giphy.com/' target={'_blank'}>Giphy</a></p>
+    </footer>
+    </main>
+  )};

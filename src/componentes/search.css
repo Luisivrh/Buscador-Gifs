@@ -1,0 +1,33 @@
+a{
+    list-style: none;    
+    text-decoration: none;
+    font-size: 8vh;
+}
+a:visited{
+    color: white;
+    list-style: none;
+}
+input, button{
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 2vh 1vw 2vh 1vw;
+    
+}
+button{
+    background-color: #293b53;
+    cursor: pointer;
+}
+
+input{
+    background-color: transparent;
+    height: 3vh;
+    width: 15vw;
+}
+h1{
+    margin: 0;
+}
+
+  
+  
